@@ -3,13 +3,14 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_app_harry_potter/models/characters_model.dart';
+import 'package:flutter_app_harry_potter/utils/constants.dart';
 import 'package:http/http.dart' as http;
 
 class APIService {
   Future<List<CharactersModel>> getCharacters(String house) async {
     try {
       List<CharactersModel> characters = [];
-      String path = "http://hp-api.herokuapp.com/api/characters/house/$house";
+      String path = "$pathProduction/characters/house/$house";
       Uri _uri = Uri.parse(path);
       http.Response response = await http.get(_uri);
       //print(response.body);
