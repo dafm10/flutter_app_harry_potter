@@ -39,7 +39,7 @@ class CharacterDetailPage extends StatelessWidget {
                 fit: StackFit.expand,
                 children: [
                   Image.network(
-                    actor.image.toString(),
+                    actor.image != "" ? actor.image.toString() : "https://http2.mlstatic.com/D_NQ_NP_955790-MLM27461540758_052018-O.jpg",
                     fit: BoxFit.cover,
                   ),
                   const DecoratedBox(

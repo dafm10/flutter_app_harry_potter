@@ -36,7 +36,7 @@ class ItemCharactersListWidget extends StatelessWidget {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: NetworkImage(
-              image,
+             image != "" ? image : "https://http2.mlstatic.com/D_NQ_NP_955790-MLM27461540758_052018-O.jpg",
             ),
           ),
         ),
